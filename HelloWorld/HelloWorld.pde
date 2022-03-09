@@ -1,16 +1,9 @@
 
 //Global Variables
-char z;
-char y;
-String d;
-String e;
-String f;
-String g;
-String ten;
-String h;
-String one;
-int two;
-int skipCount=2;
+char z, y;
+String d, e, f, g, ten, h, one;
+int two, skipCount=2, twenty;
+float decimal=1.0; //must include a zero decimal or compiler reads as INTEGER
 //
 void setup() 
 { 
@@ -24,6 +17,7 @@ void setup()
   f = "counts";
   g = "to";
   ten = "10000";
+  twenty = 10000;
   h = "by";
   one = "1";
   two = 1;
@@ -33,8 +27,10 @@ void setup()
 //
 void draw() 
 {
-  two+=1; // two+1, two++, two+=1
+  two+=skipCount;
   println(d+z, e, f, g, ten+y, h, str(two)+z);
+  twenty = twenty - 1; //Formula to count backwards from 10000 //ten-1, ten--, ten-=1
+  println(d+z, e, f, g, one+y, "backwards from", str(twenty)+z);
 }//End draw
 //
 void keyPressed() {
@@ -48,7 +44,6 @@ void mousePressed() {
  // Concatenation
  
  //
- 
  
  println("\t\t\t", d+z , e, f, g, ten+y , h, int(one)+two+z); //Casting, making a String into a Number
  println("One plus two is", one+two); //Casting is int(one), to change STRING to INTEGER
