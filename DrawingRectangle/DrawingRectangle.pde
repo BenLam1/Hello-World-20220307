@@ -12,8 +12,8 @@ Boolean nightMode=false; //Daytime is false
 void setup(
 ) 
 {
-  size(700, 500); //Display Geometry: Square (Orientations): Square, Landscape
-  //fullScreen(); //displayWidth, displayHeight
+  //size(700, 500); //Display Geometry: Square (Orientations): Square, Landscape
+  fullScreen(); //displayWidth, displayHeight
   //Population
   x = width*1/4;
   y = height*1/4;
